@@ -17,7 +17,7 @@ import org.slf4j.Logger;
 @Mod(BooschGGMod.MOD_ID) //constructed via this tutorial: https://www.youtube.com/watch?v=LpoSy091wYI&t=303s&ab_channel=ModdingbyKaupenjoe
 public class BooschGGMod
 {
-    //comment
+    //comment 2
     // Define mod id in a common place for everything to reference
     public static final String MOD_ID = "booschgg";
     // Directly reference a slf4j logger
