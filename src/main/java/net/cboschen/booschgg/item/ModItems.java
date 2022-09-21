@@ -15,7 +15,9 @@ public class ModItems {
     //example mod item: Zircon
     //example item properties added during this pattern
     public static final RegistryObject<Item> ZIRCON = ITEMS.register("zircon",
-            () -> new Item(new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
+            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.BOOSCHGG_TAB)));
+    public static final RegistryObject<Item> RAW_ZIRCON = ITEMS.register("raw_zircon",
+            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.BOOSCHGG_TAB)));
 
     public static void register(IEventBus eventBus){
         ITEMS.register(eventBus);

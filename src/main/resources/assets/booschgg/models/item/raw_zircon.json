@@ -1,0 +1,7 @@
+{
+  "_comment": "the name of this file must exactly match the id used when registering the item. Parent tells this to use a 'basic' item pattern generating a model from the image used - directories are within resources/assets",
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "booschgg:item/raw_zircon"
+  }
+}
