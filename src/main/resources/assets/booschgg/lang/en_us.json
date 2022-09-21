@@ -1,5 +1,10 @@
 {
   "item.booschgg.zircon": "Zircon",
   "item.booschgg.raw_zircon": "Raw Zircon",
-  "itemGroup.booschggtab": "Boosch Ghosts & Goblins"
+
+  "itemGroup.booschggtab": "Boosch Ghosts & Goblins",
+
+  "block.booschgg.zircon_block": "Block of Zircon",
+  "block.booschgg.zircon_ore": "Zircon Ore",
+  "block.booschgg.deepslate_zircon_ore": "Deepslate Zircon Ore"
 }

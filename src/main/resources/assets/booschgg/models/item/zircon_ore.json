@@ -1,0 +1,4 @@
+{
+  "_comment": "for simple blocks, below generates a 3d block version of the ore/block for inventory",
+  "parent": "booschgg:block/zircon_ore"
+}
