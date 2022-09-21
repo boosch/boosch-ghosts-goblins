@@ -1,6 +1,7 @@
 package net.cboschen.booschgg;
 
 import com.mojang.logging.LogUtils;
+import net.cboschen.booschgg.item.ModItems;
 import net.minecraft.client.Minecraft;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.common.MinecraftForge;
@@ -17,7 +18,6 @@ import org.slf4j.Logger;
 @Mod(BooschGGMod.MOD_ID) //constructed via this tutorial: https://www.youtube.com/watch?v=LpoSy091wYI&t=303s&ab_channel=ModdingbyKaupenjoe
 public class BooschGGMod
 {
-    //comment 2
     // Define mod id in a common place for everything to reference
     public static final String MOD_ID = "booschgg";
     // Directly reference a slf4j logger
@@ -38,6 +38,8 @@ public class BooschGGMod
     public BooschGGMod()
     {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
+
+        ModItems.register(modEventBus);
 
         // Register the commonSetup method for modloading
         modEventBus.addListener(this::commonSetup);
