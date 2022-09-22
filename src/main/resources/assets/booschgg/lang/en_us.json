@@ -1,10 +1,13 @@
 {
   "item.booschgg.zircon": "Zircon",
   "item.booschgg.raw_zircon": "Raw Zircon",
+  "item.booschgg.eightball": "Magic 8-ball",
 
   "itemGroup.booschggtab": "Boosch Ghosts & Goblins",
 
   "block.booschgg.zircon_block": "Block of Zircon",
   "block.booschgg.zircon_ore": "Zircon Ore",
-  "block.booschgg.deepslate_zircon_ore": "Deepslate Zircon Ore"
+  "block.booschgg.deepslate_zircon_ore": "Deepslate Zircon Ore",
+
+  "block.booschgg.jumpy_block": "Jump Block 1.0"
 }

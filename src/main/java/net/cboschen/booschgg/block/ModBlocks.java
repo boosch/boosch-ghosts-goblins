@@ -1,6 +1,7 @@
 package net.cboschen.booschgg.block;
 
 import net.cboschen.booschgg.BooschGGMod;
+import net.cboschen.booschgg.block.custom.JumpyBlock;
 import net.cboschen.booschgg.item.ModCreativeModeTab;
 import net.cboschen.booschgg.item.ModItems;
 import net.minecraft.util.valueproviders.UniformInt;
@@ -22,7 +23,7 @@ public class ModBlocks {
     public static final DeferredRegister<Block> BLOCKS =
             DeferredRegister.create(ForgeRegistries.BLOCKS, BooschGGMod.MOD_ID);
 
-    //basic block, wont drop itself unless there's a correct tool specified (incomplete)
+    //basic block, won't drop itself unless there's a correct tool specified (incomplete)
     //a block needs a registered entry, a blockstates.json, a block.json, a item file, and textures
     public static final RegistryObject<Block> ZIRCON_BLOCK = registerBlock("zircon_block",
             () -> new Block(BlockBehaviour.Properties.of(Material.GLASS)
@@ -37,6 +38,11 @@ public class ModBlocks {
             () -> new DropExperienceBlock(BlockBehaviour.Properties.of(Material.GLASS)
                     .strength(6f).requiresCorrectToolForDrops(),
                     UniformInt.of(3,7)), ModCreativeModeTab.BOOSCHGG_TAB);
+
+    public static final RegistryObject<Block> JUMPY_BLOCK = registerBlock("jumpy_block",
+            () -> new JumpyBlock(BlockBehaviour.Properties.of(Material.HEAVY_METAL)
+                    .strength(4f)
+                    .requiresCorrectToolForDrops()), ModCreativeModeTab.BOOSCHGG_TAB);
 
 
     //using Generics here, allows this method to return any type of RegistryObject which extends Block
