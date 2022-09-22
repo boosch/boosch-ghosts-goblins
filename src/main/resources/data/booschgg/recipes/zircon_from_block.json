@@ -1,0 +1,12 @@
+{
+  "_comments": "best practice to name this file after what the result is",
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [{
+    "item": "booschgg:zircon_block"
+  }
+  ],
+  "result": {
+    "item": "booschgg:zircon",
+    "count": 9
+  }
+}

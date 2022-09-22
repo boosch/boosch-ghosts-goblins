@@ -1,0 +1,13 @@
+{
+  "_comments": "best practice to name this file after what the result is",
+  "type": "minecraft:smelting",
+  "cookingtime": 200,
+  "experience": 0.7,
+  "group": "zircon",
+  "ingredient": {
+    "item": "booschgg:raw_zircon"
+  },
+  "result": {
+    "item": "booschgg:zircon_block"
+  }
+}

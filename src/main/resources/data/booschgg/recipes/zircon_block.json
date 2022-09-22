@@ -1,0 +1,17 @@
+{
+  "_comments": "best practice to name this file after what the result is",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###",
+    "###",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "booschgg:zircon"
+    }
+  },
+  "result": {
+    "item": "booschgg:zircon_block"
+  }
+}
