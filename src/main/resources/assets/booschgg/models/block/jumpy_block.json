@@ -1,7 +1,13 @@
 {
   "_comment": "the name of this file must exactly match the id used when registering the item. Parent tells this to use a 'basic' block pattern generating a model from a same-on-all-faces-cube - directories are within resources/assets",
-  "parent": "block/cube_all",
+  "parent": "block/cube",
   "textures": {
-    "all": "booschgg:block/jumpy_block"
+    "up": "booschgg:block/jumpy_block_topbot",
+    "down": "booschgg:block/jumpy_block_topbot",
+    "north": "booschgg:block/jumpy_block",
+    "east": "booschgg:block/jumpy_block",
+    "south": "booschgg:block/jumpy_block",
+    "west": "booschgg:block/jumpy_block",
+    "particle": "booschgg:block/jumpy_block"
   }
 }
