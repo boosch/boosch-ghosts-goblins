@@ -1,5 +1,5 @@
 {
-  "_comment": "the name of this file must exactly match the id used when registering the item. Parent tells this to use a 'basic' block pattern generating a model from a same-on-all-faces-cube - directories are within resources/assets",
+  "_comment": "Parent tells this to use a 'basic' block pattern generating a model from a cube - for irregular textures, specify all sides, top bot and particle",
   "parent": "block/cube",
   "textures": {
     "up": "booschgg:block/jumpy_block_topbot",
