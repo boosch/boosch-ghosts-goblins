@@ -10,6 +10,7 @@ import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.BlockState;
@@ -22,9 +23,12 @@ public class JumpyBlock extends Block {
         super(properties);
     }
 
+    //This method is called 4 times - once per hand on both server and client.
     @Override
     public InteractionResult use(BlockState blockState, Level level, BlockPos blockPos, Player player, InteractionHand hand, BlockHitResult result) {
-        if(!level.isClientSide()){
+        if(!level.isClientSide() &&
+        hand.equals(InteractionHand.MAIN_HAND) &&
+        player.getMainHandItem() == ItemStack.EMPTY){
             player.sendSystemMessage(Component.literal("Block: 'I'm a JumpyBlock located at (x"+
                     blockPos.getX()+
                     ", y"+blockPos.getY()+

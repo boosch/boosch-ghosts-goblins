@@ -16,9 +16,9 @@ public class ModItems {
     //example mod item: Zircon
     //example item properties added during this pattern
     public static final RegistryObject<Item> ZIRCON = ITEMS.register("zircon",
-            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.BOOSCHGG_TAB)));
+            () -> new BooschGGItem(new Item.Properties().tab(ModCreativeModeTab.BOOSCHGG_TAB)));
     public static final RegistryObject<Item> RAW_ZIRCON = ITEMS.register("raw_zircon",
-            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.BOOSCHGG_TAB)));
+            () -> new BooschGGItem(new Item.Properties().tab(ModCreativeModeTab.BOOSCHGG_TAB)));
 
     public static final RegistryObject<Item> EIGHTBALL = ITEMS.register("eightball",
             () -> new EightBallItem(new Item.Properties().tab(ModCreativeModeTab.BOOSCHGG_TAB).stacksTo(1)));

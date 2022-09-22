@@ -2,6 +2,8 @@
   "item.booschgg.zircon": "Zircon",
   "item.booschgg.raw_zircon": "Raw Zircon",
   "item.booschgg.eightball": "Magic 8-ball",
+  "item.booschgg.eightball.description": "Right-click to get a random number!",
+
 
   "itemGroup.booschggtab": "Boosch Ghosts & Goblins",
 
@@ -9,5 +11,8 @@
   "block.booschgg.zircon_ore": "Zircon Ore",
   "block.booschgg.deepslate_zircon_ore": "Deepslate Zircon Ore",
 
-  "block.booschgg.jumpy_block": "Jump Block 1.0"
+  "block.booschgg.jumpy_block": "Jump Block 1.0",
+
+  "item.booschgg.generic.moreinfo": "Press SHIFT for more info",
+  "item.booschgg.generic.credits": "Part of Boosch Ghosts & Goblins"
 }
