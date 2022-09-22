@@ -12,6 +12,9 @@ import org.jetbrains.annotations.Nullable;
 
 import java.util.List;
 
+/**
+ * Blockitems extend this, and blocks use this when registering their items, to get uniform behaviors such as 'Hold SHIFT for more info' on hover
+ */
 public class BooschGGBlockItem extends BlockItem {
     public BooschGGBlockItem(Block block, Properties properties) {
         super(block, properties);

@@ -1,0 +1,7 @@
+{
+  "_comment": "the name of this file must exactly match the id used when registering the item. Parent tells this to use a 'basic' block pattern generating a model from a same-on-all-faces-cube - directories are within resources/assets",
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "booschgg:block/zircon_lamp_on"
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "_comments": "best practice to name this file after what the result is",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "ZRZ",
+    "RGR",
+    "ZRZ"
+  ],
+  "key": {
+    "Z": {
+      "item": "booschgg:zircon"
+    },
+    "g": {
+      "item": "minecraft:glowstone"
+    },
+    "R": {
+      "item": "minecraft:redstone"
+    }
+  },
+  "result": {
+    "item": "booschgg:zircon_lamp"
+  }
+}

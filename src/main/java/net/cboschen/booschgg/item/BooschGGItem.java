@@ -11,6 +11,9 @@ import org.jetbrains.annotations.Nullable;
 
 import java.util.List;
 
+/**
+ * Items added by mod extend this in order to get uniform functional behaviors such as 'Hold SHIFT for more info'
+ */
 public class BooschGGItem extends Item {
     public BooschGGItem(Properties properties) {
         super(properties);

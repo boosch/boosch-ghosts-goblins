@@ -9,6 +9,9 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 
+/**
+ * Houses Declarations and registration of all Items added by the mod (that are not blockItems)
+ */
 public class ModItems {
     //set up a register for my mods items
     public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, BooschGGMod.MOD_ID);

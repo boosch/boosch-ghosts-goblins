@@ -2,6 +2,7 @@ package net.cboschen.booschgg.block;
 
 import net.cboschen.booschgg.BooschGGMod;
 import net.cboschen.booschgg.block.custom.JumpyBlock;
+import net.cboschen.booschgg.block.custom.ZirconLampBlock;
 import net.cboschen.booschgg.item.ModCreativeModeTab;
 import net.cboschen.booschgg.item.ModItems;
 import net.minecraft.util.valueproviders.UniformInt;
@@ -19,6 +20,9 @@ import net.minecraftforge.registries.RegistryObject;
 
 import java.util.function.Supplier;
 
+/**
+ * Houses declaration and registration of all blocks added by this mod
+ */
 public class ModBlocks {
     public static final DeferredRegister<Block> BLOCKS =
             DeferredRegister.create(ForgeRegistries.BLOCKS, BooschGGMod.MOD_ID);
@@ -43,6 +47,11 @@ public class ModBlocks {
             () -> new JumpyBlock(BlockBehaviour.Properties.of(Material.HEAVY_METAL)
                     .strength(4f)
                     .requiresCorrectToolForDrops()), ModCreativeModeTab.BOOSCHGG_TAB);
+
+    public static final RegistryObject<Block> ZIRCON_LAMP = registerBlock("zircon_lamp",
+            () -> new ZirconLampBlock(BlockBehaviour.Properties.of(Material.STONE)
+                    .strength(6f)
+                    .lightLevel(state -> state.getValue(ZirconLampBlock.LIT) ? 15:0)), ModCreativeModeTab.BOOSCHGG_TAB);
 
 
     //using Generics here, allows this method to return any type of RegistryObject which extends Block

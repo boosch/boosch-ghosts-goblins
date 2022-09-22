@@ -1,0 +1,6 @@
+{
+  "variants": {
+    "lit=true": { "model": "booschgg:block/zircon_lamp_on" },
+    "lit=false": { "model": "booschgg:block/zircon_lamp_off" }
+  }
+}
