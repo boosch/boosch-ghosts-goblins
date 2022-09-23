@@ -1,0 +1,13 @@
+{
+  "_comments": "render_type suggested by ItemBlockRenderTypes to ensure transparency supported",
+  "variants": {
+    "age=0": {"model":  "booschgg:block/blueberry_stage0"},
+    "age=1": {"model":  "booschgg:block/blueberry_stage1"},
+    "age=2": {"model":  "booschgg:block/blueberry_stage2"},
+    "age=3": {"model":  "booschgg:block/blueberry_stage3"},
+    "age=4": {"model":  "booschgg:block/blueberry_stage4"},
+    "age=5": {"model":  "booschgg:block/blueberry_stage5"},
+    "age=6": {"model":  "booschgg:block/blueberry_stage6"}
+  }
+
+}

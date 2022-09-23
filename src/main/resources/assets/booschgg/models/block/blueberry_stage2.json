@@ -1,0 +1,8 @@
+{
+  "_comments": "One of seven; unsure if rendertype goes here or on the model blockstate json",
+  "parent": "minecraft:block/crop",
+  "render_type": "cutout",
+  "textures": {
+    "crop": "booschgg:block/blueberry_stage2"
+  }
+}
