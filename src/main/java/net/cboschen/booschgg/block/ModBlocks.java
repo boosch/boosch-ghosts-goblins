@@ -45,12 +45,12 @@ public class ModBlocks {
 
     public static final RegistryObject<Block> JUMPY_BLOCK = registerBlock("jumpy_block",
             () -> new JumpyBlock(BlockBehaviour.Properties.of(Material.HEAVY_METAL)
-                    .strength(4f)
+                    .strength(2f)
                     .requiresCorrectToolForDrops()), ModCreativeModeTab.BOOSCHGG_TAB);
 
     public static final RegistryObject<Block> ZIRCON_LAMP = registerBlock("zircon_lamp",
             () -> new ZirconLampBlock(BlockBehaviour.Properties.of(Material.STONE)
-                    .strength(6f)
+                    .strength(2f)
                     .lightLevel(state -> state.getValue(ZirconLampBlock.LIT) ? 15:0)), ModCreativeModeTab.BOOSCHGG_TAB);
 
 
