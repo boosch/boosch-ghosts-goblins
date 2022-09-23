@@ -18,6 +18,8 @@
   "block.booschgg.blueberry_crop": "Blueberry Bush",
   "item.booschgg.blueberry": "Blueberry",
 
+  "entity.minecraft.villager.booschgg.jump_master": "Jump Master",
+
   "item.booschgg.generic.moreinfo": "Press SHIFT for more info",
   "item.booschgg.generic.credits": "Part of Boosch Ghosts & Goblins"
 }

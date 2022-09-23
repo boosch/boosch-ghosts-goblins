@@ -3,6 +3,7 @@ package net.cboschen.booschgg;
 import com.mojang.logging.LogUtils;
 import net.cboschen.booschgg.block.ModBlocks;
 import net.cboschen.booschgg.item.ModItems;
+import net.cboschen.booschgg.villager.ModVillagers;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.renderer.RenderType;
@@ -44,6 +45,7 @@ public class BooschGGMod
 
         ModItems.register(modEventBus);
         ModBlocks.register(modEventBus);
+        ModVillagers.register(modEventBus);
 
         // Register the commonSetup method for modloading
         modEventBus.addListener(this::commonSetup);
@@ -61,6 +63,10 @@ public class BooschGGMod
 
     private void commonSetup(final FMLCommonSetupEvent event)
     {
+        event.enqueueWork( () -> {
+            ModVillagers.registerPOIs();
+        });
+
         // Some common setup code
         LOGGER.info("HELLO FROM COMMON SETUP");
         LOGGER.info("DIRT BLOCK >> {}", ForgeRegistries.BLOCKS.getKey(Blocks.DIRT));
