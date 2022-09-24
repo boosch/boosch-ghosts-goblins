@@ -1,0 +1,7 @@
+{
+    "_comments": "biomes may be a list. Be sure to get the feature names from the Mod's PlacedFeatures registrations. Type is 'BiomeModifiers'. Step is GenerationStep.java",
+    "type": "forge:add_features",
+    "biomes": "#minecraft:is_end",
+    "features": "booschgg:end_zircon_ore_placed",
+    "step": "underground_ores"
+}

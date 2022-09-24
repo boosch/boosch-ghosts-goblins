@@ -4,6 +4,8 @@ import com.mojang.logging.LogUtils;
 import net.cboschen.booschgg.block.ModBlocks;
 import net.cboschen.booschgg.item.ModItems;
 import net.cboschen.booschgg.villager.ModVillagers;
+import net.cboschen.booschgg.world.feature.ModConfiguredFeatures;
+import net.cboschen.booschgg.world.feature.ModPlacedFeatures;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.renderer.RenderType;
@@ -46,6 +48,9 @@ public class BooschGGMod
         ModItems.register(modEventBus);
         ModBlocks.register(modEventBus);
         ModVillagers.register(modEventBus);
+
+        ModConfiguredFeatures.register(modEventBus);
+        ModPlacedFeatures.register(modEventBus);
 
         // Register the commonSetup method for modloading
         modEventBus.addListener(this::commonSetup);
