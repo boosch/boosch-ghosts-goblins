@@ -40,6 +40,10 @@ public class ModBlocks {
     public static final RegistryObject<Block> JEWELER_BENCH = registerBlock("jeweler_bench",
             () -> new Block(BlockBehaviour.Properties.of(Material.WOOD)
                     .strength(4f)), ModCreativeModeTab.BOOSCHGG_TAB);
+    //bench for banker
+    public static final RegistryObject<Block> BANKER_BENCH = registerBlock("banker_bench",
+            () -> new Block(BlockBehaviour.Properties.of(Material.WOOD)
+                    .strength(4f)), ModCreativeModeTab.BOOSCHGG_TAB);
 
     //exp-dropping ore blocks
     public static final RegistryObject<Block> ZIRCON_ORE = registerBlock("zircon_ore",

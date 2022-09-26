@@ -52,6 +52,9 @@ public class ModVillagers {
     public static final RegistryObject<PoiType> JEWELER_BENCH_POI = POI_TYPES.register("jeweler_bench_poi",
             () -> new PoiType(ImmutableSet.copyOf(ModBlocks.JEWELER_BENCH.get().getStateDefinition().getPossibleStates()), 1, 1));
 
+    public static final RegistryObject<PoiType> BANKER_BENCH_POI = POI_TYPES.register("banker_bench_poi",
+            () -> new PoiType(ImmutableSet.copyOf(ModBlocks.BANKER_BENCH.get().getStateDefinition().getPossibleStates()), 1,1));
+
     /*
         the predicates (x -> x.get()) - in line refer to the primary and secondary worksites for villagers with this profession
         The sets are what he wants to trade/accept (requested items), and where he works
@@ -74,6 +77,14 @@ public class ModVillagers {
                     ImmutableSet.of(),
                     ImmutableSet.of(),
                     SoundEvents.VILLAGER_WORK_CARTOGRAPHER));
+    //banker implementation
+    public static final RegistryObject<VillagerProfession> BANKER = VILLAGER_PROFESSIONS.register("banker",
+            () -> new VillagerProfession("banker",
+                    x -> x.get() == BANKER_BENCH_POI.get(),
+                    x -> x.get() == BANKER_BENCH_POI.get(),
+                    ImmutableSet.of(),
+                    ImmutableSet.of(),
+                    SoundEvents.VILLAGER_WORK_CARTOGRAPHER));
 
     public static void registerPOIs(){
         try{
@@ -91,6 +102,15 @@ public class ModVillagers {
             LOGGER.info("VILLAGER POI JEWELER REGISTERED~~~~~~~~~~~~~~~~~~");
         }catch(InvocationTargetException | IllegalAccessException e){
             LOGGER.info("VILLAGER POI JEWELER ERROR~~~~~~~~~~~~~~~~~~");
+            e.printStackTrace();
+        }
+        try{
+            ObfuscationReflectionHelper.findMethod(PoiType.class,
+                    "registerBlockStates", PoiType.class).invoke(null, BANKER_BENCH_POI.get() );
+
+            LOGGER.info("VILLAGER POI BANKER REGISTERED~~~~~~~~~~~~~~~~~~");
+        }catch(InvocationTargetException | IllegalAccessException e){
+            LOGGER.info("VILLAGER POI BANKER ERROR~~~~~~~~~~~~~~~~~~");
             e.printStackTrace();
         }
     }

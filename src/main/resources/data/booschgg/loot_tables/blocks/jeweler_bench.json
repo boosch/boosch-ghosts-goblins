@@ -1,0 +1,15 @@
+{
+  "_comments": "example loottable of breaking a block and getting another block of the same kind back. Wiki: https://www.youtube.com/redirect?event=video_description&redir_token=QUFFLUhqa0ljYXozaUVjc1JPaFQ1TzdHMmRlVUxiY2RFUXxBQ3Jtc0tudUMxYnpWODFkZ1ZhWkwxT2t4WGt4eTJ0clJVcWVEdUtVcEF1YlRrNTN1SWJGbENhdGNPN05oUTA1MmNmSk15SlZoWnBRdlFKSHZ6Zl80dHpPanVwckZ1OUJaLUFoWDJNcGNOQldrMFlzODRlcDN0cw&q=https%3A%2F%2Fminecraft.fandom.com%2Fwiki%2FLoot_table&v=iFFc5-zkDcA",
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "booschgg:jeweler_bench"
+        }
+      ]
+    }
+  ]
+}

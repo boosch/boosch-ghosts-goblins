@@ -16,6 +16,7 @@
   "block.booschgg.zircon_lamp": "Zircon Lamp",
   "block.booschgg.jumpy_block": "Jump Block 1.0",
   "block.booschgg.jeweler_bench": "Jeweler's Bench",
+  "block.booschgg.banker_bench": "Banker's Bench",
 
   "item.booschgg.blueberry_seeds": "Blueberry Seeds",
   "block.booschgg.blueberry_crop": "Blueberry Bush",
@@ -23,6 +24,7 @@
 
   "entity.minecraft.villager.booschgg.jump_master": "Jump Master",
   "entity.minecraft.villager.booschgg.jeweler": "Jeweler",
+  "entity.minecraft.villager.booschgg.banker": "Banker",
 
   "item.booschgg.generic.moreinfo": "Press SHIFT for more info",
   "item.booschgg.generic.credits": "Part of Boosch Ghosts & Goblins"

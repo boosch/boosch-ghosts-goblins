@@ -1,0 +1,26 @@
+{
+  "_comments": "best practice to name this file after what the result is",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "DGE",
+    "T",
+    ""
+  ],
+  "key": {
+    "T": {
+      "item": "minecraft:crafting_table"
+    },
+    "C": {
+      "item": "booschgg:copper_nugget"
+    },
+    "G": {
+      "item": "minecraft:gold_nugget"
+    },
+    "I": {
+      "item": "minecraft:iron_nugget"
+    }
+  },
+  "result": {
+    "item": "booschgg:jeweler_bench"
+  }
+}

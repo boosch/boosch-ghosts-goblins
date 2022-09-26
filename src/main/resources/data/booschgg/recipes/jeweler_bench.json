@@ -1,0 +1,26 @@
+{
+  "_comments": "best practice to name this file after what the result is",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "DGE",
+    "C",
+    ""
+  ],
+  "key": {
+    "C": {
+      "item": "minecraft:crafting_table"
+    },
+    "D": {
+      "item": "minecraft:diamond"
+    },
+    "G": {
+      "item": "minecraft:glass"
+    },
+    "E": {
+      "item": "minecraft:emerald"
+    }
+  },
+  "result": {
+    "item": "booschgg:jeweler_bench"
+  }
+}
