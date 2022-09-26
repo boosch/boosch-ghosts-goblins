@@ -1,0 +1,13 @@
+{
+  "_comment": "Parent tells this to use a 'basic' block pattern generating a model from a cube - for irregular textures, specify all sides, top bot and particle",
+  "parent": "block/cube",
+  "textures": {
+    "up": "booschgg:block/jeweler_bench_top",
+    "down": "booschgg:block/jeweler_bench_side3",
+    "north": "booschgg:block/jeweler_bench_side3",
+    "east": "booschgg:block/jeweler_bench_side3",
+    "south": "booschgg:block/jeweler_bench_side3",
+    "west": "booschgg:block/jeweler_bench_side2",
+    "particle": "booschgg:block/jeweler_bench_side3"
+  }
+}

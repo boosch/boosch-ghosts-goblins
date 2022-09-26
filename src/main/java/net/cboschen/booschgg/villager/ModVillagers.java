@@ -21,6 +21,9 @@ import java.lang.reflect.InvocationTargetException;
     ...several JSON, texture (not model), tag(job POI)
     ...ModEvents bus subscribing too...
 
+    :Done - Jump Master, uses jumpy block, sells mod-items
+    :Jeweler, uses Jeweler's Bench, buys glass, diamonds, emeralds, amythist, sells gold, emeralds, copper(coins?)
+    :Banker, uses Ledger Bench, buys  copper nuggets(coins?), gold nuggets(coins?), sells iron nuggets(coins?), Diamonds
  */
 public class ModVillagers {
 

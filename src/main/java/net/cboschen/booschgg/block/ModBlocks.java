@@ -36,6 +36,11 @@ public class ModBlocks {
             () -> new Block(BlockBehaviour.Properties.of(Material.GLASS)
                     .strength(6f).requiresCorrectToolForDrops()), ModCreativeModeTab.BOOSCHGG_TAB);
 
+    //bench for the jeweler
+    public static final RegistryObject<Block> JEWELER_BENCH = registerBlock("jeweler_bench",
+            () -> new Block(BlockBehaviour.Properties.of(Material.WOOD)
+                    .strength(4f)), ModCreativeModeTab.BOOSCHGG_TAB);
+
     //exp-dropping ore blocks
     public static final RegistryObject<Block> ZIRCON_ORE = registerBlock("zircon_ore",
             () -> new DropExperienceBlock(BlockBehaviour.Properties.of(Material.GLASS)
