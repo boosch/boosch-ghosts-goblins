@@ -1,0 +1,12 @@
+{
+  "_comments": "best practice to name this file after what the result is",
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [{
+    "item": "minecraft:copper_ingot"
+  }
+  ],
+  "result": {
+    "item": "booschgg:copper_nugget",
+    "count": 9
+  }
+}

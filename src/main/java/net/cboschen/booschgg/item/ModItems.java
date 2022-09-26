@@ -28,6 +28,8 @@ public class ModItems {
             () -> new BooschGGItem(new Item.Properties().tab(ModCreativeModeTab.BOOSCHGG_TAB)));
     public static final RegistryObject<Item> RAW_ZIRCON = ITEMS.register("raw_zircon",
             () -> new BooschGGItem(new Item.Properties().tab(ModCreativeModeTab.BOOSCHGG_TAB)));
+    public static final RegistryObject<Item> COPPER_NUGGET = ITEMS.register("copper_nugget",
+            () -> new BooschGGItem(new Item.Properties().tab(ModCreativeModeTab.BOOSCHGG_TAB)));
 
     //example moditem eightball for an item with special behaviors
     public static final RegistryObject<Item> EIGHTBALL = ITEMS.register("eightball",
