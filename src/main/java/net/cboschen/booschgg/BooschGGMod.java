@@ -70,6 +70,7 @@ public class BooschGGMod
     {
         event.enqueueWork( () -> {
             ModVillagers.registerPOIs();
+            LOGGER.info("POI REGISTRATION COMPLETED");
         });
 
         // Some common setup code

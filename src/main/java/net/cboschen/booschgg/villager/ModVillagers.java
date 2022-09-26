@@ -1,6 +1,7 @@
 package net.cboschen.booschgg.villager;
 
 import com.google.common.collect.ImmutableSet;
+import com.mojang.logging.LogUtils;
 import net.cboschen.booschgg.BooschGGMod;
 import net.cboschen.booschgg.block.ModBlocks;
 import net.minecraft.sounds.SoundEvents;
@@ -12,6 +13,7 @@ import net.minecraftforge.fml.util.ObfuscationReflectionHelper;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
+import org.slf4j.Logger;
 
 import java.lang.reflect.InvocationTargetException;
 
@@ -26,6 +28,8 @@ import java.lang.reflect.InvocationTargetException;
     :Banker, uses Ledger Bench, buys  copper nuggets(coins?), gold nuggets(coins?), sells iron nuggets(coins?), Diamonds
  */
 public class ModVillagers {
+
+    private static final Logger LOGGER = LogUtils.getLogger();
 
     //register obj for things that villagers can look at
     public static final DeferredRegister<PoiType> POI_TYPES =
@@ -44,6 +48,10 @@ public class ModVillagers {
     public static final RegistryObject<PoiType> JUMPY_BLOCK_POI = POI_TYPES.register("jumpy_block_poi",
             () -> new PoiType(ImmutableSet.copyOf(ModBlocks.JUMPY_BLOCK.get().getStateDefinition().getPossibleStates()), 1, 1));
 
+    //for the jeweler's bench - all vanilla pois have 1, 1 for the last two parameters.
+    public static final RegistryObject<PoiType> JEWELER_BENCH_POI = POI_TYPES.register("jeweler_bench_poi",
+            () -> new PoiType(ImmutableSet.copyOf(ModBlocks.JEWELER_BENCH.get().getStateDefinition().getPossibleStates()), 1, 1));
+
     /*
         the predicates (x -> x.get()) - in line refer to the primary and secondary worksites for villagers with this profession
         The sets are what he wants to trade/accept (requested items), and where he works
@@ -58,12 +66,31 @@ public class ModVillagers {
     // example of above for farmer, from VillagerProfession class:
     //   public static final VillagerProfession FARMER = register("farmer", PoiTypes.FARMER, ImmutableSet.of(Items.WHEAT, Items.WHEAT_SEEDS, Items.BEETROOT_SEEDS, Items.BONE_MEAL), ImmutableSet.of(Blocks.FARMLAND), SoundEvents.VILLAGER_WORK_FARMER);
 
+    //jeweler implementation
+    public static final RegistryObject<VillagerProfession> JEWELER = VILLAGER_PROFESSIONS.register("jeweler",
+            () -> new VillagerProfession("jeweler",
+                    x -> x.get() == JEWELER_BENCH_POI.get(),
+                    x -> x.get() == JEWELER_BENCH_POI.get(),
+                    ImmutableSet.of(),
+                    ImmutableSet.of(),
+                    SoundEvents.VILLAGER_WORK_CARTOGRAPHER));
 
     public static void registerPOIs(){
         try{
             ObfuscationReflectionHelper.findMethod(PoiType.class,
                     "registerBlockStates", PoiType.class).invoke( null, JUMPY_BLOCK_POI.get() );
+            LOGGER.info("VILLAGER POI JUMP_MASTER REGISTERED~~~~~~~~~~~~~~~~~~");
         }catch(InvocationTargetException | IllegalAccessException e){
+            LOGGER.info("VILLAGER POI JUMP_MASTER ERROR~~~~~~~~~~~~~~~~~~");
+            e.printStackTrace();
+        }
+        try{
+            ObfuscationReflectionHelper.findMethod(PoiType.class,
+                    "registerBlockStates", PoiType.class).invoke(null, JEWELER_BENCH_POI.get() );
+
+            LOGGER.info("VILLAGER POI JEWELER REGISTERED~~~~~~~~~~~~~~~~~~");
+        }catch(InvocationTargetException | IllegalAccessException e){
+            LOGGER.info("VILLAGER POI JEWELER ERROR~~~~~~~~~~~~~~~~~~");
             e.printStackTrace();
         }
     }

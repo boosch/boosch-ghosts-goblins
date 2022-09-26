@@ -24,6 +24,8 @@ public class ModEvents {
     @SubscribeEvent
     public static void addCustomTrades(VillagerTradesEvent event){
 
+        /*
+        // Example for modifying another existing villager's trades
         if(event.getType() == VillagerProfession.TOOLSMITH){
             Int2ObjectMap<List<VillagerTrades.ItemListing>> trades = event.getTrades();
             ItemStack stack = new ItemStack(ModItems.EIGHTBALL.get(), 12);
@@ -36,11 +38,25 @@ public class ModEvents {
                     8,
                     0.02F)
             );
-        }
+        }*/
 
         if(event.getType() == ModVillagers.JUMP_MASTER.get()){
             Int2ObjectMap<List<VillagerTrades.ItemListing>> trades = event.getTrades();
             ItemStack stack = new ItemStack(ModItems.BLUEBERRY_SEEDS.get(), 6);
+            int villagerLevel = 1;
+
+            trades.get(villagerLevel).add((trader, rand) -> new MerchantOffer(
+                    new ItemStack(Items.EMERALD, 1),
+                    stack,
+                    10, //max uses
+                    8, //xp yielded
+                    0.02F) //price multiplier
+            );
+        }
+
+        if(event.getType() == ModVillagers.JEWELER.get()){
+            Int2ObjectMap<List<VillagerTrades.ItemListing>> trades = event.getTrades();
+            ItemStack stack = new ItemStack(Items.GLASS, 9);
             int villagerLevel = 1;
 
             trades.get(villagerLevel).add((trader, rand) -> new MerchantOffer(
