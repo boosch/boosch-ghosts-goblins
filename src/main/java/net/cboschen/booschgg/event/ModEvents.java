@@ -21,6 +21,13 @@ import java.util.List;
  */
 @Mod.EventBusSubscriber (modid = BooschGGMod.MOD_ID)
 public class ModEvents {
+
+    /**
+     * This is a super weak way to override trades.
+     * Triggers on every VillagerTradeEvent to check if we should be adding some trades or not.
+     * ... There must be a better way ...
+     * @param event
+     */
     @SubscribeEvent
     public static void addCustomTrades(VillagerTradesEvent event){
 
@@ -62,6 +69,29 @@ public class ModEvents {
             trades.get(villagerLevel).add((trader, rand) -> new MerchantOffer(
                     new ItemStack(Items.EMERALD, 1),
                     stack,
+                    10, //max uses
+                    8, //xp yielded
+                    0.02F) //price multiplier
+            );
+        }
+
+        if(event.getType() == ModVillagers.BANKER.get()) {
+            Int2ObjectMap<List<VillagerTrades.ItemListing>> trades = event.getTrades();
+            ItemStack stack = new ItemStack(ModItems.COPPER_NUGGET.get(), 9);
+            int villagerLevel = 1;
+
+            trades.get(villagerLevel).add((trader, rand) -> new MerchantOffer(
+                    new ItemStack(Items.EMERALD, 1),
+                    stack,
+                    10, //max uses
+                    8, //xp yielded
+                    0.02F) //price multiplier
+            );
+
+
+            trades.get(villagerLevel).add((trader, rand) -> new MerchantOffer(
+                    new ItemStack(ModItems.COPPER_NUGGET.get(), 9),
+                    new ItemStack(Items.EMERALD, 1),
                     10, //max uses
                     8, //xp yielded
                     0.02F) //price multiplier

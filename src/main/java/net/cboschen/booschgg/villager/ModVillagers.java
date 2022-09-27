@@ -8,6 +8,7 @@ import net.minecraft.sounds.SoundEvents;
 import net.minecraft.world.entity.ai.village.poi.PoiType;
 import net.minecraft.world.entity.npc.Villager;
 import net.minecraft.world.entity.npc.VillagerProfession;
+import net.minecraft.world.entity.npc.VillagerTrades;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.util.ObfuscationReflectionHelper;
 import net.minecraftforge.registries.DeferredRegister;
@@ -63,8 +64,8 @@ public class ModVillagers {
             () -> new VillagerProfession("jump_master",
                     x -> x.get() == JUMPY_BLOCK_POI.get(),
                     x -> x.get() == JUMPY_BLOCK_POI.get(),
-                    ImmutableSet.of(),
-                    ImmutableSet.of(),
+                    ImmutableSet.of(), // what I will run and grab
+                    ImmutableSet.of(), //where I will work
                     SoundEvents.VILLAGER_WORK_ARMORER));
     // example of above for farmer, from VillagerProfession class:
     //   public static final VillagerProfession FARMER = register("farmer", PoiTypes.FARMER, ImmutableSet.of(Items.WHEAT, Items.WHEAT_SEEDS, Items.BEETROOT_SEEDS, Items.BONE_MEAL), ImmutableSet.of(Blocks.FARMLAND), SoundEvents.VILLAGER_WORK_FARMER);
@@ -85,6 +86,7 @@ public class ModVillagers {
                     ImmutableSet.of(),
                     ImmutableSet.of(),
                     SoundEvents.VILLAGER_WORK_CARTOGRAPHER));
+
 
     public static void registerPOIs(){
         try{
