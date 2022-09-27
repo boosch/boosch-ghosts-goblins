@@ -6,12 +6,16 @@ import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.CropBlock;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
+import net.minecraft.world.level.block.state.properties.BooleanProperty;
 import net.minecraft.world.level.block.state.properties.IntegerProperty;
+
+import static java.lang.Boolean.TRUE;
 
 //we want a 6 stage crop (vs 7)
 public class BlueberryCropBlock extends CropBlock {
 
     public static final IntegerProperty AGE = IntegerProperty.create("age",0,6);
+
 
     public BlueberryCropBlock(Properties properties) {
         super(properties);

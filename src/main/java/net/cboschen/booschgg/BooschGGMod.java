@@ -10,6 +10,7 @@ import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.ComposterBlock;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -68,9 +69,17 @@ public class BooschGGMod
 
     private void commonSetup(final FMLCommonSetupEvent event)
     {
+        //add custom points of interest. This operation is not threadsafe, so is here in queued work
         event.enqueueWork( () -> {
             ModVillagers.registerPOIs();
             LOGGER.info("POI REGISTRATION COMPLETED");
+        });
+
+        //add custom compostables. This operation si not threadsafe, so is here in queued work
+        event.enqueueWork( () -> {
+            ComposterBlock.COMPOSTABLES.putIfAbsent(ModItems.BLUEBERRY.get(), 0.5f);
+            ComposterBlock.COMPOSTABLES.putIfAbsent(ModItems.BLUEBERRY_SEEDS.get(), 0.3f);
+            LOGGER.info("COMPOSTABLES REGISTRATION COMPLETED");
         });
 
         // Some common setup code
