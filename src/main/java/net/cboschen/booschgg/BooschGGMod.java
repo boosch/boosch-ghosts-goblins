@@ -3,6 +3,7 @@ package net.cboschen.booschgg;
 import com.mojang.logging.LogUtils;
 import net.cboschen.booschgg.block.ModBlocks;
 import net.cboschen.booschgg.item.ModItems;
+import net.cboschen.booschgg.networking.ModMessages;
 import net.cboschen.booschgg.villager.ModVillagers;
 import net.cboschen.booschgg.world.feature.ModConfiguredFeatures;
 import net.cboschen.booschgg.world.feature.ModPlacedFeatures;
@@ -69,13 +70,17 @@ public class BooschGGMod
 
     private void commonSetup(final FMLCommonSetupEvent event)
     {
-        //add custom points of interest. This operation is not threadsafe, so is here in queued work
+
+
+        //add custom messages and custom points of interest. This operation is not threadsafe, so is here in queued work
         event.enqueueWork( () -> {
+            ModMessages.register();
             ModVillagers.registerPOIs();
             LOGGER.info("POI REGISTRATION COMPLETED");
         });
 
         //add custom compostables. This operation si not threadsafe, so is here in queued work
+        //this could be merged up, but the order is important(?)
         event.enqueueWork( () -> {
             ComposterBlock.COMPOSTABLES.putIfAbsent(ModItems.BLUEBERRY.get(), 0.5f);
             ComposterBlock.COMPOSTABLES.putIfAbsent(ModItems.BLUEBERRY_SEEDS.get(), 0.3f);

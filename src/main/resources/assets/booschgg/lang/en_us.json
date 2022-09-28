@@ -5,9 +5,7 @@
   "item.booschgg.eightball.description": "Right-click to get a random number!",
   "item.booschgg.copper_nugget": "Copper Nugget",
 
-
   "itemGroup.booschggtab": "Boosch Ghosts & Goblins",
-
 
   "block.booschgg.zircon_block": "Block of Zircon",
   "block.booschgg.zircon_ore": "Zircon Ore",
@@ -29,6 +27,9 @@
 
   "key.category.booschgg.tutorial": "Boosch Ghosts & Goblins Bindings",
   "key.booschgg.drink_water": "Drink Water",
+
+  "message.booschgg.drinkwater.drink": "You sip some water",
+  "message.booschgg.drinkwater.none_nearby": "You look for nearby water, but find none.",
 
   "item.booschgg.generic.moreinfo": "Press SHIFT for more info",
   "item.booschgg.generic.credits": "Part of Boosch Ghosts & Goblins"

@@ -1,6 +1,9 @@
 package net.cboschen.booschgg.event;
 
 import net.cboschen.booschgg.BooschGGMod;
+import net.cboschen.booschgg.networking.ModMessages;
+import net.cboschen.booschgg.networking.packet.DrinkWaterC2SPacket;
+import net.cboschen.booschgg.networking.packet.ExampleC2SPacket;
 import net.cboschen.booschgg.util.KeyBinding;
 import net.minecraft.client.Minecraft;
 import net.minecraft.network.chat.Component;
@@ -22,11 +25,15 @@ public class ClientEvents {
         public static void onKeyInput(InputEvent.Key key){
             if(KeyBinding.DRINKING_KEY.consumeClick()){
                 /*
-                    We can do this because this method will only ever be called on the client; thus only one player.
+                    We can do this because this method will __only ever__ be called on the client; thus only one player.
                     If called on the server - errors, no keybindings exist on the server
                  */
                 Minecraft.getInstance().player.sendSystemMessage(Component.literal("You're tryin'a take a Drink! YARrr!"));
 
+                ModMessages.sendToServer(new DrinkWaterC2SPacket());
+
+                // spawn a cow - Example
+                //ModMessages.sendToServer(new ExampleC2SPacket());
             }
         }
     }

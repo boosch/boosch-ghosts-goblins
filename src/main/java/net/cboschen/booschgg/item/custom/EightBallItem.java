@@ -34,7 +34,7 @@ public class EightBallItem extends BooschGGItem {
     }
 
     private void outputRandomNumberToPlayer(Player player){
-        player.sendSystemMessage(Component.literal("You're number is "+ getRandomNumber()));
+        player.sendSystemMessage(Component.literal("Your number is "+ getRandomNumber()));
     }
 
     private int getRandomNumber(){
