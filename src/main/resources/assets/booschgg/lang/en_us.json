@@ -27,6 +27,9 @@
   "entity.minecraft.villager.booschgg.jeweler": "Jeweler",
   "entity.minecraft.villager.booschgg.banker": "Banker",
 
+  "key.category.booschgg.tutorial": "Boosch Ghosts & Goblins Bindings",
+  "key.booschgg.drink_water": "Drink Water",
+
   "item.booschgg.generic.moreinfo": "Press SHIFT for more info",
   "item.booschgg.generic.credits": "Part of Boosch Ghosts & Goblins"
 }
